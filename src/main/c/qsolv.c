@@ -1,7 +1,6 @@
+#include "../../qsolv.h"
 #include <stdio.h>
 #include <math.h>
-
-int solv(double a, double b, double c, double *x1, double *x2);
 
 /**
 * solv
@@ -17,8 +16,8 @@ int solv(double a, double b, double c, double *x1, double *x2);
 */
 int solv(double a, double b, double c, double *x1, double *x2)
 {
-    if (a == NULL || b == NULL || c == NULL) return 1;
-    if (b^2 < 4*a*c) return 2; // bad input 
+    if (a == 0 || b == 0 || c == 0) return 1;
+    if (b*b < 4*a*c) return 2; // bad input 
     if (a == 0) return 1;
 
     *x1 = (-b + sqrt(b * b - 4 * a * c)) / (2 * a);
