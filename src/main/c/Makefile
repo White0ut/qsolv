@@ -1,5 +1,5 @@
 all:
-	gcc -Wall qsolv.c test.c -lm
+	gcc qsolv.c test.c -lm
 
 run: 
 	./a.out
