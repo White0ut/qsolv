@@ -1,7 +1,6 @@
-#include "../../qsolv.h"
-#include <stdio.h>
-#include <math.h>
-// #include <cunit.h> 
+#include "qsolv.h"
+//#include <stdio.h>
+//#include <math.h>
 
 /**
 * solv
@@ -17,7 +16,7 @@
 */
 int solv(double a, double b, double c, double *x1, double *x2)
 {
-    // if (a == 0 || b == 0 || c == 0) return 1;
+    //if (a == 0 || b == 0 || c == 0) return 1;
     if (b*b < 4*a*c) return 2; // bad input 
     if (a == 0) return 1;
 
