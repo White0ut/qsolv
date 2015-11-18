@@ -1,0 +1,16 @@
+Script started on Tue 17 Nov 2015 10:27:46 PM EST
+]0;lawrence@TheMachine: ~/Qsolve/qsolvlawrence@TheMachine:~/Qsolve/qsolv$ make
+gcc src/main/c/qsolv.c src/main/c/sqrtmock.c src/test/c/test.c -lm -o test.out
+./test.out
+ERROR LINE 121: x1, 0.575886 != 0.575886
+ERROR LINE 122: x2, -2.480648 != -2.480648
+ERROR LINE 134: x1, -0.666667 != -0.666667
+ERROR LINE 147: x1, -0.922795 != -0.922795
+ERROR LINE 148: x2, 1.878351 != 1.878351
+ERROR LINE 160: x1, 0.443000 != 0.443000
+ERROR LINE 161: x2, -1.693000 != -1.693000
+ERROR LINE 173: x1, 1.454545 != 1.454545
+]0;lawrence@TheMachine: ~/Qsolve/qsolvlawrence@TheMachine:~/Qsolve/qsolv$ exit
+exit
+
+Script done on Tue 17 Nov 2015 10:27:51 PM EST

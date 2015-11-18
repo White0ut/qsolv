@@ -1,0 +1,37 @@
+README
+
+Typescript
+	The typescript is of the unit tests being run on qsolv
+
+	The file is named mockQsolveTests.log
+
+Unit Tests
+	Each unit test is setup by setting a,b and c, sending the mock object the square root to pass to the qsolve function, calling qsolv and asking for what was sent to the mock object.
+
+ 	Then each unit test asserts the following values to check for the correct value 
+	checks value sent to the mock object
+	checks the return value of qsolve
+	checks the value of both for the roots calculated
+
+	The file is named test.c
+
+Mock Object
+	The mock object simply hands the qsolv function the square root value it was setup with.
+
+	The file is named sqrtmock.c
+
+All of the files
+
+	Makefile
+	qsolve.c
+	qsolve.h
+	sqrtmock.c
+	sqrtmock.h
+	mockQsolveTests.log
+	test.c
+
+
+
+
+
+
