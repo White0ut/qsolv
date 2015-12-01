@@ -1,12 +1,18 @@
 cc = gcc
 
 flags = -lm
+all: UnitTestMockSqrt UnitTestNoMock
 
-all:testMock roots QSOLVE sqrtmock 
+UnitTestNoMock:UnitTest roots QSOLVE sqrtmock 
+	$(cc) -o QuadSolverMockTest testMock.o roots.o MockQSOLVE.o sqrtmock.o $(flags)
+
+UnitTestMockSqrt:testMock roots MockQSOLVE sqrtmock 
 	$(cc) -o QuadSolverMockTest testMock.o roots.o MockQSOLVE.o sqrtmock.o $(flags)
 
 testMock:
-	gcc -c testMock.c 
+	gcc -c testMock.c
+UnitTest:
+	gcc -c UnitTest.c 
 roots:
 	gcc -c ../main/roots.c	
 QSOLVE:
