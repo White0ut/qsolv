@@ -1,8 +1,5 @@
 #include "qsolv.h"
 #include "sqrtmock.h"
-//#include <stdio.h>
-//#include <math.h>
-
 /**
 * solv
 *
@@ -15,7 +12,7 @@
 * 	2 - unsupported
 *		non-real root
 */
-double solv(double a, double b, double c, double *x1, double *x2)
+double qsolv(double a, double b, double c, double *x1, double *x2)
 {
     //if (a == 0 || b == 0 || c == 0) return 1;
 

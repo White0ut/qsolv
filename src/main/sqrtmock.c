@@ -1,7 +1,5 @@
-//#include <math.h>
-
-static double Sqrt;
-static double Sent;
+double Sqrt;
+double Sent;
 
 void setSqrt(double ans){
 Sqrt = ans;
