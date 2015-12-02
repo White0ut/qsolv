@@ -1,9 +1,7 @@
-all:
-	gcc src/main/QSOLVE.c src/main/sqrtmock.c src/test/test.c -lm -o test.out
+all: main test
 	
-	./test.out
+main:
+	cd src/main && make
 
-root:
-	gcc src/main/sqrt.c -lm -o sqrt.out
-
-	./sqrt.out
+test:
+	cd src/test && make

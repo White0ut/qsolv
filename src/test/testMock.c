@@ -38,6 +38,7 @@ int main(int *argc, char **argv)
     double ret;
     double sent;
 
+printf("---------Starting unit test on qsolve method using a mock sqare root object---------\n\n");
     //Base case
     a = 2.0;
     b = 2.0;
@@ -300,6 +301,6 @@ int main(int *argc, char **argv)
     assert_nan("x1", x1);
     assert_nan("x2", x2);
 	
-
+    printf("-----------------------------------End of tests-------------------------------------\n");
     return 0;
 }

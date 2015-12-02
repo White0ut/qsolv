@@ -1,0 +1,45 @@
+Hi, Please input a,b,c double size cofficents of a qudratic equation in the format (a,b,c)
+The 2 roots are:0.000000 and -1.000000
+enter a,b,c again or type exit to end
+The 2 roots are:1.000000 and -0.750000
+enter a,b,c again or type exit to end
+The 2 roots are:-0.250000 and -1.000000
+enter a,b,c again or type exit to end
+The 2 roots are:0.000000 and -0.500000
+enter a,b,c again or type exit to end
+The 2 roots are:-nan and -nan
+enter a,b,c again or type exit to end
+The 2 roots are:0.000000 and -0.250000
+enter a,b,c again or type exit to end
+The 2 roots are:0.556466 and -2.156466
+enter a,b,c again or type exit to end
+The 2 roots are:-0.666667 and -2.000000
+enter a,b,c again or type exit to end
+The 2 roots are:-0.922795 and 1.878351
+enter a,b,c again or type exit to end
+The 2 roots are:0.469338 and 2.130662
+enter a,b,c again or type exit to end
+The 2 roots are:1.454545 and 0.000000
+enter a,b,c again or type exit to end
+The 2 roots are:nan and nan
+enter a,b,c again or type exit to end
+The 2 roots are:nan and -nan
+enter a,b,c again or type exit to end
+The 2 roots are:-nan and -nan
+enter a,b,c again or type exit to end
+The 2 roots are:-nan and -nan
+enter a,b,c again or type exit to end
+The 2 roots are:nan and -nan
+enter a,b,c again or type exit to end
+The 2 roots are:-nan and -inf
+enter a,b,c again or type exit to end
+The 2 roots are:-nan and -nan
+enter a,b,c again or type exit to end
+The 2 roots are:-nan and -nan
+enter a,b,c again or type exit to end
+The 2 roots are:-nan and -nan
+enter a,b,c again or type exit to end
+The 2 roots are:-nan and -nan
+enter a,b,c again or type exit to end
+...Exiting QuadSolver Application
+

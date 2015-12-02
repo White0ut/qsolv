@@ -1,0 +1,7 @@
+--- output.txt	2015-12-02 00:28:28.987813386 -0500
++++ correctOutput.txt	2015-12-01 23:56:30.499847000 -0500
+@@ -42,3 +42,4 @@
+ The 2 roots are:-nan and -nan
+ enter a,b,c again or type exit to end
+ ...Exiting QuadSolver Application
++

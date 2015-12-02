@@ -1,7 +1,6 @@
-#include "../main/qsolv.h"
-#include "../main/sqrtmock.h"
-//#include <stdio.h>
-//#include <assert.h>
+#include <stdio.h>
+#include <math.h>
+#include "../main/QSOLVE.h"
 
 
 // Assert to check if values are exactly equal
@@ -33,20 +32,18 @@
   } \
 }
 
-int main(int *argc, char **argv) {
+int main(int *argc, char **argv)
+{
     double a,b,c,x1, x2;
     double ret;
-    double sent;
 
+printf("---------Starting unit test on qsolve method without using a mock sqare root object---------\n\n");
     //Base case
     a = 2.0;
     b = 2.0;
     c = 0.0;
-    setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,0.0);
-    assert_eql("sent",sent,b * b - 4 * a * c);
     assert_eql("x2",x2,-1.0);
     assert_eql("x1",x1,0.0);
 
@@ -58,11 +55,8 @@ int main(int *argc, char **argv) {
     a = 4.0;
     b = -1.0;
     c = -3.0;
-    setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,0.0);
-    assert_eql("sent",sent,b * b - 4 * a * c);
     assert_eql("x1",x1,1.0);
     assert_eql("x2",x2,-0.75);
 
@@ -70,11 +64,8 @@ int main(int *argc, char **argv) {
     a = 4.0;
     b = 5.0;
     c = 1.0;
-    setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,0.0);
-    assert_eql("sent",sent,b * b - 4 * a * c);
     assert_eql("x1",x1,-0.25);
     assert_eql("x2",x2,-1.0);
 	
@@ -83,11 +74,8 @@ int main(int *argc, char **argv) {
     a = 4;
     b = 2;
     c = 0;
-    setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,0.0);
-    assert_eql("sent",sent,b * b - 4 * a * c);
     assert_eql("x1",x1,0.0);
     assert_eql("x2",x2,-.5);
 
@@ -96,11 +84,8 @@ int main(int *argc, char **argv) {
     a = 0;
     b = 0;
     c = 0;
-    setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,0.0);
-    assert_eql("sent",sent,b * b - 4 * a * c);
     assert_nan("x1",x1);
     assert_nan("x2",x2);
 	
@@ -109,11 +94,8 @@ int main(int *argc, char **argv) {
 	a = 8;
     b = 2;
     c = 0;
-    setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,0.0);
-    assert_eql("sent",sent,b * b - 4 * a * c);
     assert_eql("x1",x1,0.0);
     assert_eql("x2",x2,-0.25);
 	
@@ -122,11 +104,8 @@ int main(int *argc, char **argv) {
 	a = 2.5;
     b = 4;
     c = -3;
-    setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,0.0);
-    assert_eql("sent",sent,b * b - 4 * a * c);
     assert_eqld("x1",x1,0.6081824);
     assert_eqld("x2",x2, -1.2331824);
 	
@@ -135,11 +114,8 @@ int main(int *argc, char **argv) {
 	a = 1.5;
     b = 4;
     c = 2;
-    setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,0.0);
-    assert_eql("sent",sent,b * b - 4 * a * c);
     assert_eqld("x1",x1,-0.66666666);
     assert_eql("x2",x2, -2.0);
 	
@@ -148,11 +124,8 @@ int main(int *argc, char **argv) {
 	a = -4.5;
     b = 4.3;
     c = 7.8;
-    setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,0.0);
-    assert_eql("sent",sent,b * b - 4 * a * c);
     assert_eqld("x1",x1,-0.922795297);
     assert_eqld("x2",x2, 1.878351);
 	
@@ -161,11 +134,8 @@ int main(int *argc, char **argv) {
 	a = -2;
     b = 5.2;
     c = -2;
-	setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,0.0);
-    assert_eql("sent",sent,b * b - 4 * a * c);
     assert_eqld("x1",x1, 0.469338);
     assert_eqld("x2",x2, 2.1306624);
 	
@@ -174,11 +144,8 @@ int main(int *argc, char **argv) {
 	a = 2.2;
     b = -3.2;
     c = 0;
-	setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,0.0);
-    assert_eql("sent",sent,b * b - 4 * a * c);
     assert_eqld("x1",x1, 1.4545455);
     assert_eql("x2",x2, 0.0);
 	
@@ -187,11 +154,8 @@ int main(int *argc, char **argv) {
 	a = sqrt (-1);
     b = 2;
     c = 0;
-	setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,3.0);
-    assert_nan("sent",sent);
     assert_nan("x1", x1);
     assert_nan("x2", x2);
 
@@ -200,11 +164,8 @@ int main(int *argc, char **argv) {
 	a = sqrt (-1);
     b = sqrt (-1);
     c = sqrt (-1);
-	setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,3.0);
-    assert_nan("sent",sent);
     assert_nan("x1", x1);
     assert_nan("x2", x2);
 	
@@ -213,11 +174,8 @@ int main(int *argc, char **argv) {
 	a = 9;
     b = 32;
     c = 62;
-	setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,2.0);
-    assert_eql("sent",sent,b * b - 4 * a * c);
     assert_nan("x1", x1);
     assert_nan("x2", x2);
 	
@@ -226,11 +184,8 @@ int main(int *argc, char **argv) {
 	a = 4;
     b = 3;
     c = 6;
-	setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,2.0);
-    assert_eql("sent",sent,b * b - 4 * a * c);
     assert_nan("x1", x1);
     assert_nan("x2", x2);
 	
@@ -239,11 +194,8 @@ int main(int *argc, char **argv) {
 	a = 2;
     b = sqrt (-1);
     c = 0;
-    setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret, 3.0);
-    assert_nan("sent",sent);
     assert_nan("x1", x1);
     assert_nan("x2", x2);
 	
@@ -252,11 +204,8 @@ int main(int *argc, char **argv) {
 	a = 2;
     b = INFINITY;
     c = 0;
-    setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,4.0);
-    assert_eql("sent",sent,b * b - 4 * a * c);
     assert_nan("x1", x1);
     assert_inf("x2", x2);
 	
@@ -266,11 +215,8 @@ int main(int *argc, char **argv) {
 	a = INFINITY;
     b = INFINITY;
     c = 0;
-    setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,0.0);
-    assert_nan("sent",sent);
     assert_nan("x1", x1);
     assert_nan("x2", x2);
 	
@@ -279,11 +225,8 @@ int main(int *argc, char **argv) {
 	a = 23;
     b = 23;
     c = INFINITY;
-    setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,2.0);
-    assert_inf("sent",sent);
     assert_nan("x1", x1);
     assert_nan("x2", x2);
 
@@ -292,14 +235,11 @@ int main(int *argc, char **argv) {
 	a = INFINITY;
     b = INFINITY;
     c = INFINITY;
-    setSqrt(sqrt(b * b - 4 * a * c)); //Send the mock object the sqrt
     ret = qsolv(a,b,c, &x1, &x2);	//Call qqsolve 
-    sent = getSent(); // Get the value sent to the mock object
     assert_eql("ret",ret,0.0);
-    assert_nan("sent",sent);
     assert_nan("x1", x1);
     assert_nan("x2", x2);
 	
-
+    printf("---------------------------------------End of tests-----------------------------------------\n");
     return 0;
 }
